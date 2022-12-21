@@ -60,18 +60,18 @@ class ProductManager{
 }
 
 async function run(){
-    const manager = new ProductManager ('./products.json')
+    // const manager = new ProductManager ('./products.json')
     // console.log(await manager.getProducts()); 
-    console.log(await manager.addProduct('producto prueba 1', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25));
-    console.log(await manager.addProduct('producto prueba 2', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 3', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 4', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 5', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 6', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 7', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 8', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 9', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
-    console.log(await manager.addProduct('producto prueba 10', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 1', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25));
+    // console.log(await manager.addProduct('producto prueba 2', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 3', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 4', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 5', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 6', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 7', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 8', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 9', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
+    // console.log(await manager.addProduct('producto prueba 10', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25))
 
     // // console.log(await manager.getProducts()); 
     // // console.log(await manager.getProductsById(1));
