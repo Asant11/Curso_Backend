@@ -42,17 +42,21 @@ class FileManager{
 
     getById = async (ID) =>{
         const products = await this.get()
-        const validateID = await products.find(product => product.id === ID)
+        const validateID = await products.find(product => product.id == ID)
         return validateID ?? console.log(`"The product with the ID " + ${ID}  + " doesn't exists!"`);
     }
 
     update = async (id,obj) => {
         obj.id = id
         const list = await this.read()
-        const idx = list.findIndex(prod => prod.id === id)
-        if(idx === -1) return 'Product not found'
 
-        list[idx] = obj
+        for (let i = 0; i < list.length; i++) {
+            if(list[i].id == id){
+                list[i] = obj
+                break
+            }
+        }
+
         await this.write(list)
     }
 

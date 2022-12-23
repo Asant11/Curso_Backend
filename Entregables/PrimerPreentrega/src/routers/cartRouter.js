@@ -5,8 +5,8 @@ const router = Router()
 const cartManager = new CartManager('carts.json')
 
 router.get('/', async (req, res) =>{
-    const cart = await cartManager.get()
-    res.json({cart})
+    const carts = await cartManager.get()
+    res.json({carts})
 })
 
 router.get('/:id', async (req, res) =>{

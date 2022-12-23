@@ -8,7 +8,7 @@ class CartManager{
 
     getNextID = list => {
         const count = list.length;
-        return count > 0 ? list[count-1].id + 1 : 1;
+        return (count > 0) ? list[count-1].id + 1 : 1;
     }
 
     read = () => {
@@ -43,9 +43,22 @@ class CartManager{
         return newCart
     } 
 
+    update = async (id,obj) => {
+        obj.id = id
+        const list = await this.read()
+
+        for (let i = 0; i < list.length; i++) {
+            if(list[i].id == id){
+                list[i] = obj
+                break
+            }
+        }
+        await this.write(list)
+    }
+
     getById = async (ID) =>{
         const products = await this.get()
-        const validateID = await products.find(product => product.id === ID)
+        const validateID = await products.find(product => product.id == ID)
         return validateID ?? console.log(`"The product with the ID " + ${ID}  + " doesn't exists!"`);
     }
 
@@ -55,7 +68,7 @@ class CartManager{
 
         let found = false
 
-        for (let index = 0; index < cart.products.length; index++) {
+        for (let i = 0; i < cart.products.length; i++) {
             if(cart.products[i].id == productID ){
                 cart.products[i].quantity++
                 found = true
@@ -63,11 +76,10 @@ class CartManager{
             }
         }
 
-        if(!found){
-            cart.products.push({
-                id: productID, quantity: 1 })
+        if(found == false){
+            cart.products.push({id: productID, quantity: 1 })
         }
-        await this.write(cart)
+        await this.update(cartId, cart)
 
         return cart
     }

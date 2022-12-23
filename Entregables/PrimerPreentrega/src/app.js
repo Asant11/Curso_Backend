@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}))
 app.use('/static', express.static('public'))
 
 app.use('/api/products', productsRouter)
-app.use('/api/cart', cartRouter)
+app.use('/api/carts', cartRouter)
 
 app.use('/', (req,res) => res.send('HOME'))
 
